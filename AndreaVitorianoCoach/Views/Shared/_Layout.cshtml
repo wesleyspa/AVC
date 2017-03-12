@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top" style="height: 120px; background:#013554;">
+        <div class="container">
+            <div class="navbar-header">
+                <div class="container" style="margin-top: 25px;">
+                    <div class="row">
+                        <div class="col-md-4 titulo-site">Coach</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 nome-site"><a href="/">Andréa Vitoriano</a></div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right menu-principal navbar-custom">
+                    <li>@Html.ActionLink("Conteúdos", "Index", "Videos")</li>
+                    <li>@Html.ActionLink("Serviços", "About", "Home")</li>
+                    <li>@Html.ActionLink("Projetos", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("Clientes", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("Contato", "Contact", "Home")</li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    <div class="body-content">
+        @RenderBody()
+        <br />
+        <br />
+        <br />
+        <footer class="footer footer-class">
+            <div class="container">
+                <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            </div>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
